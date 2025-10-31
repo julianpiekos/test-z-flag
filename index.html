@@ -998,5 +998,12 @@
             <div id="ile"></div>
         </div>
     </div>
+    <script>
+        const divKraje = document.getElementById("kraje")
+        const krajeTagiTekstTablica = divKraje.innerHTML.split("        </div>").map(el => el + "        </div>")
+        krajeTagiTekstTablica.sort(() => Math.random() - 0.5);
+        divKraje.innerHTML = krajeTagiTekstTablica.join("")
+    </script>
 </body>
+
 </html>
