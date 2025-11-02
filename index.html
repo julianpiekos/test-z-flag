@@ -1002,9 +1002,13 @@
         const divKraje = document.getElementById("kraje")
         const krajeTagiTekstTablica = divKraje.innerHTML.split("        </div>").map(el => el + "        </div>")
         krajeTagiTekstTablica.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < 195; i++) {
+            krajeTagiTekstTablica[i].replace(/\[[0-9]*\]/g, `[${i}]`)
+        }
         divKraje.innerHTML = krajeTagiTekstTablica.join("")
     </script>
 </body>
 
 </html>
+
 
