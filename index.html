@@ -1001,6 +1001,7 @@
     <script>
         const divKraje = document.getElementById("kraje")
         const krajeTagiTekstTablica = divKraje.innerHTML.split("        </div>").map(el => el + "        </div>")
+        krajeTagiTekstTablica[krajeTagiTekstTablica.length - 1] = krajeTagiTekstTablica[krajeTagiTekstTablica.length - 1].slice(0, -15)
         krajeTagiTekstTablica.sort(() => Math.random() - 0.5);
         for (let i = 0; i < 195; i++) {
             krajeTagiTekstTablica[i] = krajeTagiTekstTablica[i].replace(/\[[0-9]*\]/g, `[${i}]`)
@@ -1010,7 +1011,3 @@
 </body>
 
 </html>
-
-
-
-
